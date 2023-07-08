@@ -1,0 +1,26 @@
+{
+  "name": "@jkba/eslint-config-angular",
+  "version": "0.0.0",
+  "description": "Opinionated ESLint config for Angular projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmeinlschmidt/eslint-config-angular.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "angular",
+    "lint"
+  ],
+  "author": "Jakub Meinlschmidt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmeinlschmidt/eslint-config-angular/issues"
+  },
+  "homepage": "https://github.com/jmeinlschmidt/eslint-config-angular#readme"
+}
+
