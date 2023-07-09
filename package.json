@@ -21,6 +21,17 @@
   "bugs": {
     "url": "https://github.com/jmeinlschmidt/eslint-config-angular/issues"
   },
-  "homepage": "https://github.com/jmeinlschmidt/eslint-config-angular#readme"
+  "homepage": "https://github.com/jmeinlschmidt/eslint-config-angular#readme",
+  "peerDependencies": {
+    "@angular-eslint/eslint-plugin": "^16.0.3",
+    "@angular-eslint/eslint-plugin-template": "^16.0.3",
+    "@angular-eslint/template-parser": "^16.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
 }
-
