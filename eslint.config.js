@@ -38,6 +38,7 @@ module.exports = {
 
         // Ignore `Validators.required` etc.
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
+        "no-warning-comments": [ 'error', { "terms": ["todo", "fixme"], "location": "anywhere" } ],
       },
     },
     {
