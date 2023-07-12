@@ -13,9 +13,9 @@ module.exports = {
       },
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:@typescript-eslint/strict',
+        // 'plugin:@typescript-eslint/stylistic', // TODO: Tohle zahodit
+        // 'plugin:@typescript-eslint/stylistic-type-checked', // TODO: Tohle chci pouzit
+        'plugin:@typescript-eslint/strict-type-checked',
         'plugin:@angular-eslint/recommended',
         // 'plugin:rxjs/recommended', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/2
         'plugin:import/recommended',
