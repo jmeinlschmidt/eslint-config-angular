@@ -16,6 +16,14 @@
     "angular",
     "lint"
   ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "index.js",
+    "package.json",
+    "prettier.config.js"
+  ],
   "author": "Jakub Meinlschmidt",
   "license": "MIT",
   "bugs": {
