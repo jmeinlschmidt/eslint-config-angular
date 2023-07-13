@@ -22,7 +22,7 @@ module.exports = {
         'plugin:import/recommended',
         'plugin:import/typescript',
       ],
-      plugins: ['@typescript-eslint', '@angular-eslint', 'rxjs'], // TODO: Prettier
+      plugins: ['@typescript-eslint', '@angular-eslint', 'rxjs', 'rxjs-angular'],
       settings: {
         // Reference https://www.npmjs.com/package/eslint-plugin-import
         'import/resolver': {
@@ -33,9 +33,9 @@ module.exports = {
         }
       },
       rules: {
-        // 'rxjs-angular/prefer-async-pipe': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/2
-        // 'rxjs-angular/prefer-composition': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/2
-        // 'rxjs-angular/prefer-takeuntil': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/2
+        'rxjs-angular/prefer-async-pipe': 'error',
+        'rxjs-angular/prefer-composition': 'error',
+        'rxjs-angular/prefer-takeuntil': 'error',
         
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }], // Ignore `Validators.required` etc.
         '@typescript-eslint/no-confusing-void-expression': 'off', // I just simply disagree with this rule
