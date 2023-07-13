@@ -35,6 +35,15 @@ module.exports = {
         }
       },
       rules: {
+        'no-warning-comments': [ 'error', { 'terms': ['todo', 'fixme'], 'location': 'anywhere' } ],
+        'no-console': 'error',
+
+        /**
+         * Declaration sort is handled by import/order rule.
+         * This rule handles order within {}-brackets only.
+         */
+        'sort-imports': [ 'error', { 'ignoreDeclarationSort': true }],
+
         'rxjs-angular/prefer-async-pipe': 'error',
         'rxjs-angular/prefer-composition': 'error',
         'rxjs-angular/prefer-takeuntil': 'error',
@@ -65,8 +74,19 @@ module.exports = {
         // '@angular-eslint/require-localize-metadata': 'error', // TODO: Error
         '@angular-eslint/use-component-selector': 'error',
         
-        'no-warning-comments': [ 'error', { 'terms': ['todo', 'fixme'], 'location': 'anywhere' } ],
-        'no-console': 'error',
+        'import/no-absolute-path': 'error',
+        'import/newline-after-import': [ 'error', { 'count': 1 } ],
+        'import/order': [
+          'error',
+          {
+            'groups': ['builtin', 'external', 'parent', 'sibling', 'index'],
+            'newlines-between': 'always',
+            'alphabetize': {
+              'order': 'asc',
+              'caseInsensitive': true
+            }
+          }
+        ],
       },
     },
     {
