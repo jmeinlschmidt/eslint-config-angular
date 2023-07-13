@@ -10,7 +10,7 @@ Opinionated ESLint config for Angular projects
 For some unknown weird reason, following dependencies have to be installed in your project as well. (https://github.com/jmeinlschmidt/eslint-config-angular/issues/5)
 
 ```sh
-npm -D eslint-plugin-rxjs eslint-plugin-rxjs-angular
+npm i -D eslint-plugin-rxjs eslint-plugin-rxjs-angular
 ```
 
 ```sh
@@ -22,7 +22,7 @@ npm i -D @jkba/eslint-config-angular
 
 Extend your eslint configuration with `"@jkba/angular"`:
 
-```json
+```javascript
 // .eslintrc.json
 
 {
@@ -39,7 +39,7 @@ module.exports = require('@jkba/eslint-config-angular/prettier.config');
 ```
 
 
-### Midifying rules
+### Modifying rules
 
 > :warning: Work in Progress
 
