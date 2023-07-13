@@ -1,7 +1,5 @@
 # eslint-config-angular
 
-> :warning: This package is not yet released!
-
 Opinionated ESLint config for Angular projects
 
 
