@@ -6,11 +6,10 @@ module.exports = {
       files: [
         '*.ts'
       ],
+      parser: '@typescript-eslint/parser',
       parserOptions: {
-        parser: '@typescript-eslint/parser',
         ecmaVersion: 2019,
-        project: true,
-        project: 'tsconfig.json',
+        project: ['./tsconfig.*?.json'],
         sourceType: 'module',
       },
       extends: [
@@ -19,11 +18,11 @@ module.exports = {
         'plugin:@typescript-eslint/strict-type-checked',
         'plugin:@angular-eslint/recommended',
         'plugin:@angular-eslint/template/process-inline-templates',
-        // 'plugin:rxjs/recommended', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/2
+        'plugin:rxjs/recommended', // For some unknown weird reason, this plugin needs to be installed in child project as well.
         'plugin:import/recommended',
         'plugin:import/typescript',
       ],
-      plugins: ['@typescript-eslint', '@angular-eslint'], // TODO: Prettier
+      plugins: ['@typescript-eslint', '@angular-eslint', 'rxjs'], // TODO: Prettier
       settings: {
         // Reference https://www.npmjs.com/package/eslint-plugin-import
         'import/resolver': {
@@ -72,9 +71,7 @@ module.exports = {
       files: [
         '*.html'
       ],
-      parserOptions: {
-        parser: '@angular-eslint/template-parser',
-      },
+      parser: '@angular-eslint/template-parser',
       extends: [
         'plugin:@angular-eslint/template/accessibility',
         'plugin:@angular-eslint/template/recommended',

@@ -7,8 +7,14 @@ Opinionated ESLint config for Angular projects
 
 ## Installation
 
+For some unknown weird reason, following dependencies have to be installed in your project as well. (TODO: Create issue)
+
 ```sh
-npm i @jkba/eslint-config-angular
+npm -D eslint-plugin-rxjs eslint-plugin-rxjs-angular
+```
+
+```sh
+npm i -D @jkba/eslint-config-angular
 ```
 
 
