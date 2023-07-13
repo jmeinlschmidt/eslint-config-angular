@@ -1,18 +1,28 @@
 # eslint-config-angular
 
+![](https://img.shields.io/npm/dt/@jkba/eslint-config-angular?logo=npm)
+
+
 Opinionated ESLint config for Angular projects
 
 
 ## Installation
 
-For some unknown weird reason, following dependencies have to be installed in your project as well. (https://github.com/jmeinlschmidt/eslint-config-angular/issues/5)
-
 ```sh
-npm i -D eslint-plugin-rxjs eslint-plugin-rxjs-angular
-```
+npm i -D \
+  prettier \
+  @angular-eslint/eslint-plugin \
+  @angular-eslint/eslint-plugin-template \
+  @angular-eslint/template-parser \
+  @typescript-eslint/eslint-plugin \
+  @typescript-eslint/parser \
+  eslint-plugin-import \
+  eslint-config-prettier \
+  eslint-plugin-prettier \
+  eslint-plugin-rxjs \
+  eslint-plugin-rxjs-angular \
+  @jkba/eslint-config-angular
 
-```sh
-npm i -D @jkba/eslint-config-angular
 ```
 
 

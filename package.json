@@ -32,19 +32,17 @@
   "homepage": "https://github.com/jmeinlschmidt/eslint-config-angular#readme",
   "peerDependencies": {
     "eslint": ">=8",
+    "typescript": ">=4",
     "prettier": ">=3",
-    "rxjs": ">=7",
-    "typescript": ">=4"
-  },
-  "dependencies": {
-    "@angular-eslint/eslint-plugin": "^16.0.0",
-    "@angular-eslint/eslint-plugin-template": "^16.0.0",
-    "@angular-eslint/template-parser": "^16.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-rxjs": "^5.0.3",
-    "eslint-plugin-rxjs-angular": "^2.0.1"
+    "@angular-eslint/eslint-plugin": ">=16",
+    "@angular-eslint/eslint-plugin-template": ">=16",
+    "@angular-eslint/template-parser": ">=16",
+    "@typescript-eslint/eslint-plugin": ">=6",
+    "@typescript-eslint/parser": ">=6",
+    "eslint-plugin-import": ">=2.27.0",
+    "eslint-config-prettier": ">=8",
+    "eslint-plugin-prettier": ">=5",
+    "eslint-plugin-rxjs": ">=5",
+    "eslint-plugin-rxjs-angular": ">=2"
   }
 }
