@@ -1,8 +1,8 @@
 # eslint-config-angular
 
-Opinionated ESLint config for Angular projects
-
 > :warning: This package is not yet released!
+
+Opinionated ESLint config for Angular projects
 
 
 ## Installation
@@ -19,6 +19,27 @@ npm i -D @jkba/eslint-config-angular
 
 
 ## Usage
+
+Extend your eslint configuration with `"@jkba/angular"`:
+
+```json
+// .eslintrc.json
+
+{
+  "extends": [ "@jkba/angular" ]
+}
+```
+
+Create prettier configuration file:
+
+```javascript
+// prettier.config.js
+
+module.exports = require('@jkba/eslint-config-angular/prettier.config');
+```
+
+
+### Midifying rules
 
 > :warning: Work in Progress
 

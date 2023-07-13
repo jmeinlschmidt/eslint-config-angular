@@ -1,5 +1,3 @@
-// TODO: Consider merging TS and HTML overrides to rules prop
-
 module.exports = {
   overrides: [
     {
@@ -21,6 +19,10 @@ module.exports = {
         'plugin:rxjs/recommended', // For some unknown weird reason, this plugin needs to be installed in child project as well.
         'plugin:import/recommended',
         'plugin:import/typescript',
+
+        // Prettier rule must always be the very last!
+        // This rule might intentionally disable some rules declared above due to conflicts
+        'plugin:prettier/recommended',
       ],
       plugins: ['@typescript-eslint', '@angular-eslint', 'rxjs', 'rxjs-angular'],
       settings: {
@@ -75,7 +77,10 @@ module.exports = {
       extends: [
         'plugin:@angular-eslint/template/accessibility',
         'plugin:@angular-eslint/template/recommended',
-        // 'plugin:prettier/recommended', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/3
+
+        // Prettier rule must always be the very last!
+        // This rule might intentionally disable some rules declared above due to conflicts
+        'plugin:prettier/recommended',
       ],
       plugins: ['@angular-eslint/template'],
       rules: {
