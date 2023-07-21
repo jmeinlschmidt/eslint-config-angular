@@ -24,6 +24,7 @@
     "package.json",
     "prettier.config.js"
   ],
+  "readme": "README.md",
   "author": "Jakub Meinlschmidt",
   "license": "MIT",
   "bugs": {
