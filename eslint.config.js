@@ -47,6 +47,29 @@ module.exports = {
         'rxjs-angular/prefer-async-pipe': 'error',
         'rxjs-angular/prefer-composition': 'error',
         'rxjs-angular/prefer-takeuntil': 'error',
+
+        // Reference https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md
+        'rxjs/finnish': [
+          'error',
+          {
+            'functions': false,
+            'methods': false,
+            'names': {
+                '^(canActivate|canActivateChild|canDeactivate|canLoad|intercept|resolve|validate)$': false
+            },
+            'parameters': true,
+            'properties': true,
+            'strict': false,
+            'types': {
+                '^EventEmitter$': false,
+                '^Store$': false
+            },
+            'variables': true
+          }
+        ],
+        'rxjs/no-exposed-subjects': [ 'error', { 'allowProtected': true } ],
+        'rxjs/no-compat': 'error',
+        'rxjs/throw-error': 'error',
         
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }], // Ignore `Validators.required` etc.
         '@typescript-eslint/no-confusing-void-expression': 'off', // I just simply disagree with this rule
