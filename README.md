@@ -21,6 +21,7 @@ npm i -D \
   eslint-plugin-prettier \
   eslint-plugin-rxjs \
   eslint-plugin-rxjs-angular \
+  eslint-import-resolver-typescript \
   @jkba/eslint-config-angular
 
 ```

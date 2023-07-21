@@ -24,7 +24,7 @@ module.exports = {
         // This rule might intentionally disable some rules declared above due to conflicts
         'plugin:prettier/recommended',
       ],
-      plugins: ['@typescript-eslint', '@angular-eslint', 'rxjs', 'rxjs-angular'],
+      plugins: ['@typescript-eslint', '@angular-eslint', 'rxjs', 'rxjs-angular', 'import'],
       settings: {
         // Reference https://www.npmjs.com/package/eslint-plugin-import
         'import/resolver': {
@@ -79,7 +79,13 @@ module.exports = {
         'import/order': [
           'error',
           {
-            'groups': ['builtin', 'external', 'parent', 'sibling', 'index'],
+            'groups': [
+              ['builtin', 'external'],
+              'internal',
+              'parent',
+              'sibling',
+              'index',
+            ],          
             'newlines-between': 'always',
             'alphabetize': {
               'order': 'asc',
@@ -87,6 +93,9 @@ module.exports = {
             }
           }
         ],
+        'import/no-useless-path-segments': ['error', { noUselessIndex: true }],
+        // 'import/no-deprecated': 'error', // Throws false-positive for RxJS,
+        'import/no-self-import': 'error',
       },
     },
     {
