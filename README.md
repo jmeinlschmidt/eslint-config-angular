@@ -50,7 +50,44 @@ module.exports = require('@jkba/eslint-config-angular/prettier.config');
 
 ### Modifying rules
 
-> :warning: Work in Progress
+Modify (add/disable/override) specific rules via the `rules` property:
+
+```json
+// .eslintrc.json
+
+{
+  "extends": [ "@jkba/angular" ],
+  "rules": {
+    "@typescript-eslint/prefer-nullish-coalescing": "off", // Requires the `strictNullChecks` compiler option to be turned on to function correctly.
+    "@typescript-eslint/no-unnecessary-condition": "off", // Requires the `strictNullChecks` compiler option to be turned on to function correctly.
+    "@angular-eslint/template/click-events-have-key-events": "off", // Accessibility is not supported on this project
+    "@angular-eslint/template/interactive-supports-focus": "off", // Accessibility is not supported on this project
+  }
+
+  // ...
+}
+```
+
+or using the `overrides` property:
+
+```json
+// .eslintrc.json
+
+{
+  "extends": [ "@jkba/angular" ],
+  "overrides": [
+    {
+      "files": [ "*.html" ],
+      "parserOptions": { "parser": "@angular-eslint/template-parser" },
+      "rules": {
+        "@angular-eslint/template/i18n": "off" // i18n is not supported on this project
+      }
+    }
+  ]
+}
+```
+
+Reference [Overriding Settings from Shareable Configs](https://eslint.org/docs/latest/extend/shareable-configs#overriding-settings-from-shareable-configs).
 
 
 ## Build
