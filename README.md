@@ -31,7 +31,7 @@ npm i -D \
 
 Extend your eslint configuration with `"@jkba/angular"`:
 
-```javascript
+```js
 // .eslintrc.json
 
 {
@@ -52,7 +52,7 @@ module.exports = require('@jkba/eslint-config-angular/prettier.config');
 
 Modify (add/disable/override) specific rules via the `rules` property:
 
-```json
+```js
 // .eslintrc.json
 
 {
@@ -70,7 +70,7 @@ Modify (add/disable/override) specific rules via the `rules` property:
 
 or using the `overrides` property:
 
-```json
+```js
 // .eslintrc.json
 
 {
