@@ -92,9 +92,10 @@ Reference [Overriding Settings from Shareable Configs](https://eslint.org/docs/l
 
 ## Build
 
-> :warning: Work in Progress
+Use `npm link` and then `npm link @jkba/eslint-config-angular` in your project.
+PRs are welcome but keep in mind this is an opinionated configuration. 
 
-Refer to https://eslint.org/docs/latest/extend/shareable-configs.
+Reference [Share Configurations](https://eslint.org/docs/latest/extend/shareable-configs).
 
 
 ## License
