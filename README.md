@@ -63,8 +63,6 @@ Modify (add/disable/override) specific rules via the `rules` property:
     "@angular-eslint/template/click-events-have-key-events": "off", // Accessibility is not supported on this project
     "@angular-eslint/template/interactive-supports-focus": "off", // Accessibility is not supported on this project
   }
-
-  // ...
 }
 ```
 
