@@ -137,7 +137,6 @@ module.exports = {
       plugins: ['@angular-eslint/template'],
       rules: {
         // '@angular-eslint/template/attributes-order': 'error', // TODO: Bug present (https://github.com/angular-eslint/angular-eslint/issues/1456)
-        '@angular-eslint/template/button-has-type': 'warn', // For me, it is only a suggestion
         '@angular-eslint/template/no-inline-styles': 'warn', // For me, it is only a suggestion
         '@angular-eslint/template/conditional-complexity': [
           'error', { 'maxComplexity': 3 } // Max 3 is enough, create derived variable with proper naming
