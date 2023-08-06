@@ -48,6 +48,20 @@ module.exports = require('@jkba/eslint-config-angular/prettier.config');
 ```
 
 
+### Enable Prettier
+
+In VSCode, add the following lines to your `settings.json`
+
+```json
+{
+  "prettier.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
+```
+
 ### Modifying rules
 
 Modify (add/disable/override) specific rules via the `rules` property:
