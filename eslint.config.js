@@ -45,6 +45,12 @@ module.exports = {
          */
         'sort-imports': [ 'error', { 'ignoreDeclarationSort': true }],
 
+        /**
+         * Handled by https://typescript-eslint.io/rules/no-unused-vars/
+         * You must disable the base rule as it can report incorrect errors
+         */
+        'no-unused-vars': 'off',
+
         'rxjs-angular/prefer-async-pipe': 'error',
         'rxjs-angular/prefer-composition': 'error',
         'rxjs-angular/prefer-takeuntil': 'error',
@@ -72,6 +78,7 @@ module.exports = {
         'rxjs/no-compat': 'error',
         'rxjs/throw-error': 'error',
         
+        '@typescript-eslint/no-unused-vars': ['error', { 'args': 'after-used' }],
         '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }], // Ignore `Validators.required` etc.
         '@typescript-eslint/no-confusing-void-expression': 'off', // I just simply disagree with this rule
         '@typescript-eslint/explicit-member-accessibility': [
