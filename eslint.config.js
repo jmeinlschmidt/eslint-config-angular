@@ -88,7 +88,7 @@ module.exports = {
         '@angular-eslint/sort-ngmodule-metadata-arrays': 'error',
         '@angular-eslint/prefer-on-push-component-change-detection': 'error',
         '@angular-eslint/use-component-view-encapsulation': 'warn', // For me, it is only a suggestion
-        '@angular-eslint/prefer-output-readonly': 'error', // TODO: Not working (does nothing)
+        '@angular-eslint/prefer-output-readonly': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/14
         '@angular-eslint/contextual-decorator': 'error',
         '@angular-eslint/component-max-inline-declarations': [ 'error', { 'template': 20 } ],
         '@angular-eslint/no-attribute-decorator': 'error',
@@ -101,7 +101,7 @@ module.exports = {
         '@angular-eslint/no-queries-metadata-property': 'error',
         '@angular-eslint/prefer-standalone-component': 'error',
         '@angular-eslint/relative-url-prefix': 'error',
-        // '@angular-eslint/require-localize-metadata': 'error', // TODO: Error
+        // '@angular-eslint/require-localize-metadata': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/13
         '@angular-eslint/use-component-selector': 'error',
         
         'import/no-absolute-path': 'error',
