@@ -84,7 +84,6 @@ module.exports = {
         '@angular-eslint/prefer-output-readonly': 'error', // TODO: Not working (does nothing)
         '@angular-eslint/contextual-decorator': 'error',
         '@angular-eslint/component-max-inline-declarations': [ 'error', { 'template': 20 } ],
-        '@angular-eslint/contextual-decorator': 'error',
         '@angular-eslint/no-attribute-decorator': 'error',
         '@angular-eslint/no-conflicting-lifecycle': 'error',
         '@angular-eslint/no-empty-lifecycle-method': 'error',
