@@ -51,7 +51,7 @@ module.exports = {
          */
         'no-unused-vars': 'off',
 
-        'rxjs-angular/prefer-async-pipe': 'error',
+        'rxjs-angular/prefer-async-pipe': 'warn',
         'rxjs-angular/prefer-composition': 'off', // I prefer takeUntilDestroyed() operator
         'rxjs-angular/prefer-takeuntil': 'error',
 
