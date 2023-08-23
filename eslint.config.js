@@ -103,6 +103,22 @@ module.exports = {
         '@angular-eslint/relative-url-prefix': 'error',
         // '@angular-eslint/require-localize-metadata': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/13
         '@angular-eslint/use-component-selector': 'error',
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case",
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "kebab-case", // I just don't really agree with using camelCase. Material isn't using it neither.
+          }
+        ],
         
         'import/no-absolute-path': 'error',
         'import/newline-after-import': [ 'error', { 'count': 1 } ],

@@ -111,6 +111,11 @@ PRs are welcome but keep in mind this is an opinionated configuration.
 Reference [Share Configurations](https://eslint.org/docs/latest/extend/shareable-configs).
 
 
+## Release
+
+Use `npm version`, don't forget to push the tag and the CI will take care of the rest.
+
+
 ## License
 
 This project is licensed under [MIT License](http://opensource.org/licenses/MIT/).
