@@ -38,6 +38,7 @@ module.exports = {
       rules: {
         'no-warning-comments': [ 'error', { 'terms': ['todo', 'fixme'], 'location': 'anywhere' } ],
         'no-console': 'error',
+        'prefer-template': 'error',
 
         /**
          * Declaration sort is handled by import/order rule.
