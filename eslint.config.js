@@ -85,6 +85,7 @@ module.exports = {
         '@typescript-eslint/explicit-member-accessibility': [
           'error', { 'overrides': { 'constructors': 'no-public' } }
         ],
+        "@typescript-eslint/prefer-optional-chain": "error",
         
         '@angular-eslint/sort-ngmodule-metadata-arrays': 'error',
         '@angular-eslint/prefer-on-push-component-change-detection': 'error',
