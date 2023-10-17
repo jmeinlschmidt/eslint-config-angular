@@ -54,7 +54,7 @@ module.exports = {
 
         'rxjs-angular/prefer-async-pipe': 'warn',
         'rxjs-angular/prefer-composition': 'off', // I prefer takeUntilDestroyed() operator
-        'rxjs-angular/prefer-takeuntil': 'error',
+        'rxjs-angular/prefer-takeuntil': 'off', // I prefer takeUntilDestroyed() operator
 
         // Reference https://github.com/cartant/eslint-plugin-rxjs/blob/main/docs/rules/finnish.md
         'rxjs/finnish': [
