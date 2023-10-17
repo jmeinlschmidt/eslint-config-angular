@@ -36,6 +36,13 @@ module.exports = {
         }
       },
       rules: {
+        'no-implicit-coercion': 'error',
+        'no-self-compare': 'error',
+        'no-unmodified-loop-condition': 'error',
+        'no-unreachable-loop': 'error',
+        'default-case': 'warn',
+        'eqeqeq': 'error',
+        'max-classes-per-file': 'error',
         'no-warning-comments': [ 'error', { 'terms': ['todo', 'fixme'], 'location': 'anywhere' } ],
         'no-console': 'error',
         'prefer-template': 'error',
