@@ -103,6 +103,17 @@ or using the `overrides` property:
 Reference [Overriding Settings from Shareable Configs](https://eslint.org/docs/latest/extend/shareable-configs#overriding-settings-from-shareable-configs).
 
 
+### Rules for apps
+
+Some of the rules declared in this package are quite strict and might be considered more suitable for publishable libraries than applications. Applying such rules in application context probably won't bring any significant results in code quality thus may be considered ineffective.
+
+Especially when using structure like Nx Workspace, it is possible to adjust the rules per library. In my use-cases, I tend to disable the following rules in purely feature (application) related libraries but keep them enabled in, for example, shared libraries.
+
+- `@typescript-eslint/explicit-member-accessibility`
+- `rxjs/no-exposed-subjects`
+- `@angular-eslint/prefer-output-readonly`
+
+
 ## Build
 
 Use `npm link` and then `npm link @jkba/eslint-config-angular` in your project.
