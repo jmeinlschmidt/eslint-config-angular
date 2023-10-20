@@ -46,6 +46,7 @@ module.exports = {
         'no-warning-comments': [ 'error', { 'terms': ['todo', 'fixme'], 'location': 'anywhere' } ],
         'no-console': 'error',
         'prefer-template': 'error',
+        'arrow-body-style': ['error', 'as-needed'],
 
         /**
          * Declaration sort is handled by import/order rule.
