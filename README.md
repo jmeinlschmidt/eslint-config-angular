@@ -16,7 +16,6 @@ npm i -D \
   @angular-eslint/template-parser \
   @typescript-eslint/eslint-plugin \
   @typescript-eslint/parser \
-  @ngrx/eslint-plugin \
   eslint-plugin-import \
   eslint-config-prettier \
   eslint-plugin-prettier \

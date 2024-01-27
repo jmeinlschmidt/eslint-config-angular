@@ -19,7 +19,6 @@ module.exports = {
         'plugin:rxjs/recommended', // For some unknown weird reason, this plugin needs to be installed in child project as well.
         'plugin:import/recommended',
         'plugin:import/typescript',
-        'plugin:@ngrx/all',
 
         // Prettier rule must always be the very last!
         // This rule might intentionally disable some rules declared above due to conflicts
