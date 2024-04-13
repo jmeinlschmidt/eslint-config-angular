@@ -123,7 +123,7 @@ Reference [Share Configurations](https://eslint.org/docs/latest/extend/shareable
 
 ## Release
 
-Use `npm version`, don't forget to push the tag and the CI will take care of the rest.
+Use `npm version`, don't forget to push the tag (`git push --follow-tags`) and the CI will take care of the rest.
 
 
 ## License
