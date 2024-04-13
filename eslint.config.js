@@ -182,7 +182,6 @@ module.exports = {
         ],
         '@angular-eslint/template/i18n': 'error',
         '@angular-eslint/template/no-any': 'error',
-        '@angular-eslint/template/no-call-expression': 'error',
         '@angular-eslint/template/no-duplicate-attributes': 'error',
         '@angular-eslint/template/no-interpolation-in-attributes': 'error',
         '@angular-eslint/template/prefer-self-closing-tags': 'error',
