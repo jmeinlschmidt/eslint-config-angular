@@ -101,6 +101,7 @@ module.exports = {
         ],
         "@typescript-eslint/prefer-optional-chain": "error",
         
+        '@angular-eslint/no-input-rename': 'off', // I just simply disagree with this rule. Especially while using "transform" property.
         '@angular-eslint/sort-ngmodule-metadata-arrays': 'error',
         '@angular-eslint/prefer-on-push-component-change-detection': 'error',
         '@angular-eslint/use-component-view-encapsulation': 'warn', // For me, it is only a suggestion
