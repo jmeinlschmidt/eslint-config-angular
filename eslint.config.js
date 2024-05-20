@@ -186,7 +186,8 @@ module.exports = {
         '@angular-eslint/template/no-duplicate-attributes': 'error',
         '@angular-eslint/template/no-interpolation-in-attributes': 'error',
         '@angular-eslint/template/prefer-self-closing-tags': 'error',
-        '@angular-eslint/template/use-track-by-function': 'error'
+        '@angular-eslint/template/use-track-by-function': 'error',
+        '@angular-eslint/template/prefer-control-flow': 'error'
       }
     },
   ],
