@@ -5,6 +5,8 @@
 
 Opinionated ESLint config for Angular projects
 
+> ⚠️ **Support for ESLint v9**: See issue https://github.com/jmeinlschmidt/eslint-config-angular/issues/17
+
 
 ## Installation
 
