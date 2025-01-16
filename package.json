@@ -1,6 +1,6 @@
 {
   "name": "@jkba/eslint-config-angular",
-  "version": "1.7.1",
+  "version": "2.0.0",
   "description": "Opinionated ESLint config for Angular projects",
   "main": "index.js",
   "scripts": {
