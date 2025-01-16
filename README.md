@@ -5,25 +5,21 @@
 
 Opinionated ESLint config for Angular projects
 
-> ⚠️ **Support for ESLint v9**: See issue https://github.com/jmeinlschmidt/eslint-config-angular/issues/17
-
 
 ## Installation
 
 ```sh
 npm i -D \
   prettier \
-  @angular-eslint/eslint-plugin \
-  @angular-eslint/eslint-plugin-template \
-  @angular-eslint/template-parser \
-  @typescript-eslint/eslint-plugin \
-  @typescript-eslint/parser \
+  angular-eslint \
   eslint-plugin-import \
   eslint-config-prettier \
   eslint-plugin-prettier \
   eslint-plugin-rxjs \
   eslint-plugin-rxjs-angular \
   eslint-import-resolver-typescript \
+  @eslint/js \
+  typescript-eslint \
   @jkba/eslint-config-angular
 
 ```
