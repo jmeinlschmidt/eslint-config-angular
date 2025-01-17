@@ -7,8 +7,6 @@ const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommen
 const importPlugin = require('eslint-plugin-import');
 
 const config = tseslint.config(
-  eslint.configs.recommended,
-  tseslint.configs.recommended,
   {
     files: ['**/*.ts'],
     processor: angular.processInlineTemplates,
@@ -17,6 +15,7 @@ const config = tseslint.config(
       tseslint.configs.stylisticTypeChecked,
       tseslint.configs.strictTypeChecked,
       angular.configs.tsRecommended,
+      // TODO
       // 'plugin:rxjs/recommended', // For some unknown weird reason, this plugin needs to be installed in child project as well.
       importPlugin.flatConfigs?.recommended,
       importPlugin.flatConfigs?.typescript,
@@ -29,7 +28,99 @@ const config = tseslint.config(
         'typescript': true,
         'node': true,
       }      
-    }
+    },
+    rules: {
+      'no-implicit-coercion': 'error',
+      'no-self-compare': 'error',
+      'no-unmodified-loop-condition': 'error',
+      'no-unreachable-loop': 'error',
+      'default-case': 'warn',
+      'eqeqeq': 'error',
+      'max-classes-per-file': 'error',
+      'no-warning-comments': [ 'error', { 'terms': ['todo', 'fixme'], 'location': 'anywhere' } ],
+      'no-console': 'error',
+      'prefer-template': 'error',
+      'arrow-body-style': ['error', 'as-needed'],
+
+      /**
+       * Declaration sort is handled by import/order rule.
+       * This rule handles order within {}-brackets only.
+       */
+      'sort-imports': [ 'error', { 'ignoreDeclarationSort': true }],
+
+      /**
+       * Handled by https://typescript-eslint.io/rules/no-unused-vars/
+       * You must disable the base rule as it can report incorrect errors
+       */
+      'no-unused-vars': 'off',
+      
+      '@typescript-eslint/no-unused-vars': ['error', { 'args': 'after-used' }],
+      '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }], // Ignore `Validators.required` etc.
+      '@typescript-eslint/no-confusing-void-expression': 'off', // I just simply disagree with this rule
+      '@typescript-eslint/explicit-member-accessibility': [
+        'error', { 'overrides': { 'constructors': 'no-public' } }
+      ],
+      "@typescript-eslint/prefer-optional-chain": "error",
+      
+      '@angular-eslint/no-input-rename': 'off', // I just simply disagree with this rule. Especially while using "transform" property.
+      '@angular-eslint/prefer-on-push-component-change-detection': 'error',
+      '@angular-eslint/use-component-view-encapsulation': 'warn', // For me, it is only a suggestion
+      '@angular-eslint/prefer-output-readonly': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/14
+      '@angular-eslint/contextual-decorator': 'error',
+      '@angular-eslint/component-max-inline-declarations': [ 'error', { 'template': 20 } ],
+      '@angular-eslint/no-attribute-decorator': 'error',
+      '@angular-eslint/no-conflicting-lifecycle': 'error',
+      '@angular-eslint/no-empty-lifecycle-method': 'error',
+      '@angular-eslint/no-forward-ref': 'warn', // For me, it is only a suggestion
+      '@angular-eslint/no-input-prefix': 'error',
+      '@angular-eslint/no-lifecycle-call': 'error',
+      '@angular-eslint/no-pipe-impure': 'error',
+      '@angular-eslint/no-queries-metadata-property': 'error',
+      '@angular-eslint/prefer-standalone': 'error',
+      '@angular-eslint/prefer-signals': 'error',
+      '@angular-eslint/relative-url-prefix': 'error',
+      // '@angular-eslint/require-localize-metadata': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/13
+      '@angular-eslint/use-component-selector': 'error',
+      "@angular-eslint/component-selector": [
+        "error",
+        {
+          "type": "element",
+          "prefix": "app",
+          "style": "kebab-case",
+        }
+      ],
+      "@angular-eslint/directive-selector": [
+        "error",
+        {
+          "type": "attribute",
+          "prefix": "app",
+          "style": "kebab-case", // I just don't really agree with using camelCase. Material isn't using it neither.
+        }
+      ],
+      
+      'import/no-absolute-path': 'error',
+      'import/newline-after-import': [ 'error', { 'count': 1 } ],
+      'import/order': [
+        'error',
+        {
+          'groups': [
+            ['builtin', 'external'],
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+          ],          
+          'newlines-between': 'always',
+          'alphabetize': {
+            'order': 'asc',
+            'caseInsensitive': true
+          }
+        }
+      ],
+      'import/no-useless-path-segments': ['error', { noUselessIndex: true }],
+      // 'import/no-deprecated': 'error', // Throws false-positive for RxJS,
+      'import/no-self-import': 'error',
+    },
   },
   {
     files: ['**/*.html'],
@@ -54,7 +145,7 @@ const config = tseslint.config(
   },
   // Prettier rule must always be the very last!
   // This rule might intentionally disable some rules declared above due to conflicts
-  eslintPluginPrettierRecommended
+  eslintPluginPrettierRecommended,
 );
 
 module.exports = config;
