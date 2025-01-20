@@ -20,6 +20,7 @@ npm i -D \
   eslint-import-resolver-typescript \
   @eslint/js \
   typescript-eslint \
+  @smarttools/eslint-plugin-rxjs \
   @jkba/eslint-config-angular
 
 ```
