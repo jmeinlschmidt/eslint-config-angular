@@ -25,9 +25,9 @@ const config = tseslint.config(
       'import/resolver': {
         // You will also need to install and configure the TypeScript resolver
         // See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
-        'typescript': true,
-        'node': true,
-      }      
+        typescript: true,
+        node: true,
+      },
     },
     rules: {
       'no-implicit-coercion': 'error',
@@ -35,9 +35,9 @@ const config = tseslint.config(
       'no-unmodified-loop-condition': 'error',
       'no-unreachable-loop': 'error',
       'default-case': 'warn',
-      'eqeqeq': 'error',
+      eqeqeq: 'error',
       'max-classes-per-file': 'error',
-      'no-warning-comments': [ 'error', { 'terms': ['todo', 'fixme'], 'location': 'anywhere' } ],
+      'no-warning-comments': ['error', { terms: ['todo', 'fixme'], location: 'anywhere' }],
       'no-console': 'error',
       'prefer-template': 'error',
       'arrow-body-style': ['error', 'as-needed'],
@@ -46,28 +46,29 @@ const config = tseslint.config(
        * Declaration sort is handled by import/order rule.
        * This rule handles order within {}-brackets only.
        */
-      'sort-imports': [ 'error', { 'ignoreDeclarationSort': true }],
+      'sort-imports': ['error', { ignoreDeclarationSort: true }],
 
       /**
        * Handled by https://typescript-eslint.io/rules/no-unused-vars/
        * You must disable the base rule as it can report incorrect errors
        */
       'no-unused-vars': 'off',
-      
-      '@typescript-eslint/no-unused-vars': ['error', { 'args': 'after-used' }],
+
+      '@typescript-eslint/no-unused-vars': ['error', { args: 'after-used' }],
       '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }], // Ignore `Validators.required` etc.
       '@typescript-eslint/no-confusing-void-expression': 'off', // I just simply disagree with this rule
       '@typescript-eslint/explicit-member-accessibility': [
-        'error', { 'overrides': { 'constructors': 'no-public' } }
+        'error',
+        { overrides: { constructors: 'no-public' } },
       ],
-      "@typescript-eslint/prefer-optional-chain": "error",
-      
+      '@typescript-eslint/prefer-optional-chain': 'error',
+
       '@angular-eslint/no-input-rename': 'off', // I just simply disagree with this rule. Especially while using "transform" property.
       '@angular-eslint/prefer-on-push-component-change-detection': 'error',
       '@angular-eslint/use-component-view-encapsulation': 'warn', // For me, it is only a suggestion
       '@angular-eslint/prefer-output-readonly': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/14
       '@angular-eslint/contextual-decorator': 'error',
-      '@angular-eslint/component-max-inline-declarations': [ 'error', { 'template': 20 } ],
+      '@angular-eslint/component-max-inline-declarations': ['error', { template: 20 }],
       '@angular-eslint/no-attribute-decorator': 'error',
       '@angular-eslint/no-conflicting-lifecycle': 'error',
       '@angular-eslint/no-empty-lifecycle-method': 'error',
@@ -81,41 +82,35 @@ const config = tseslint.config(
       '@angular-eslint/relative-url-prefix': 'error',
       // '@angular-eslint/require-localize-metadata': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/13
       '@angular-eslint/use-component-selector': 'error',
-      "@angular-eslint/component-selector": [
-        "error",
+      '@angular-eslint/component-selector': [
+        'error',
         {
-          "type": "element",
-          "prefix": "app",
-          "style": "kebab-case",
-        }
+          type: 'element',
+          prefix: 'app',
+          style: 'kebab-case',
+        },
       ],
-      "@angular-eslint/directive-selector": [
-        "error",
+      '@angular-eslint/directive-selector': [
+        'error',
         {
-          "type": "attribute",
-          "prefix": "app",
-          "style": "kebab-case", // I just don't really agree with using camelCase. Material isn't using it neither.
-        }
+          type: 'attribute',
+          prefix: 'app',
+          style: 'kebab-case', // I just don't really agree with using camelCase. Material isn't using it neither.
+        },
       ],
-      
+
       'import/no-absolute-path': 'error',
-      'import/newline-after-import': [ 'error', { 'count': 1 } ],
+      'import/newline-after-import': ['error', { count: 1 }],
       'import/order': [
         'error',
         {
-          'groups': [
-            ['builtin', 'external'],
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-          ],          
+          groups: [['builtin', 'external'], 'internal', 'parent', 'sibling', 'index'],
           'newlines-between': 'always',
-          'alphabetize': {
-            'order': 'asc',
-            'caseInsensitive': true
-          }
-        }
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+        },
       ],
       'import/no-useless-path-segments': ['error', { noUselessIndex: true }],
       // 'import/no-deprecated': 'error', // Throws false-positive for RxJS,
@@ -124,15 +119,13 @@ const config = tseslint.config(
   },
   {
     files: ['**/*.html'],
-    extends: [
-      ...angular.configs.templateRecommended,
-      ...angular.configs.templateAccessibility,
-    ],
+    extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
     rules: {
       '@angular-eslint/template/attributes-order': 'error',
       '@angular-eslint/template/no-inline-styles': 'warn', // For me, it is only a suggestion
       '@angular-eslint/template/conditional-complexity': [
-        'error', { 'maxComplexity': 3 } // Max 3 is enough, create derived variable with proper naming
+        'error',
+        { maxComplexity: 3 }, // Max 3 is enough, create derived variable with proper naming
       ],
       '@angular-eslint/template/i18n': 'error',
       '@angular-eslint/template/no-any': 'error',
@@ -140,7 +133,7 @@ const config = tseslint.config(
       '@angular-eslint/template/no-interpolation-in-attributes': 'error',
       '@angular-eslint/template/prefer-self-closing-tags': 'error',
       '@angular-eslint/template/use-track-by-function': 'error',
-      '@angular-eslint/template/prefer-control-flow': 'error'
+      '@angular-eslint/template/prefer-control-flow': 'error',
     },
   },
   // Prettier rule must always be the very last!
