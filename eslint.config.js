@@ -5,6 +5,7 @@ const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
 const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
 const importPlugin = require('eslint-plugin-import');
+const rxjs = require('@smarttools/eslint-plugin-rxjs');
 
 const config = tseslint.config(
   {
@@ -20,6 +21,7 @@ const config = tseslint.config(
       importPlugin.flatConfigs?.recommended,
       importPlugin.flatConfigs?.typescript,
     ],
+    plugins: { rxjs },
     settings: {
       // Reference https://www.npmjs.com/package/eslint-plugin-import
       'import/resolver': {
