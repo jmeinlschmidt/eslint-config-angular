@@ -170,6 +170,7 @@ const config = tseslint.config(
     extends: [eslintPluginUnicorn.configs.recommended],
     rules: {
       'unicorn/prevent-abbreviations': 'off', // I just simply disagree with this rule
+      'unicorn/array-reduce': 'off', // Author of banning reduce belongs to Functional Programming hell
     },
   },
 
