@@ -1,11 +1,11 @@
 // @ts-check
 
-const eslint = require('@eslint/js');
-const tseslint = require('typescript-eslint');
-const angular = require('angular-eslint');
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
-const importPlugin = require('eslint-plugin-import');
-const rxjs = require('@smarttools/eslint-plugin-rxjs');
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import angular from 'angular-eslint';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import importPlugin from 'eslint-plugin-import';
+import rxjs from '@smarttools/eslint-plugin-rxjs';
 
 const config = tseslint.config(
   {
@@ -120,7 +120,7 @@ const config = tseslint.config(
         {
           type: 'attribute',
           prefix: 'app',
-          style: 'kebab-case', // I just don't really agree with using camelCase. Material isn't using it neither.
+          style: 'kebab-case', // I just don't really agree with using camelCase. Material isn't using it either.
         },
       ],
 
@@ -166,7 +166,7 @@ const config = tseslint.config(
   eslintPluginPrettierRecommended,
 );
 
-module.exports = config;
+export default config;
 
 // notes
 

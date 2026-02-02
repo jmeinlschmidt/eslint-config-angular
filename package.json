@@ -1,8 +1,14 @@
 {
   "name": "@jkba/eslint-config-angular",
   "version": "2.2.0",
+  "type": "module",
   "description": "Opinionated ESLint config for Angular projects",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./eslint.config": "./eslint.config.js",
+    "./prettier.config": "./prettier.config.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
