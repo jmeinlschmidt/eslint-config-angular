@@ -4,8 +4,10 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import angular from 'angular-eslint';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import importPlugin from 'eslint-plugin-import';
+import * as importPlugin from 'eslint-plugin-import';
 import rxjs from '@smarttools/eslint-plugin-rxjs';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import globals from 'globals';
 
 const config = tseslint.config(
   {
@@ -161,6 +163,16 @@ const config = tseslint.config(
       '@angular-eslint/template/prefer-control-flow': 'error',
     },
   },
+  {
+    languageOptions: {
+      globals: globals.builtin,
+    },
+    extends: [eslintPluginUnicorn.configs.recommended],
+    rules: {
+      'unicorn/prevent-abbreviations': 'off', // I just simply disagree with this rule
+    },
+  },
+
   // Prettier rule must always be the very last!
   // This rule might intentionally disable some rules declared above due to conflicts
   eslintPluginPrettierRecommended,

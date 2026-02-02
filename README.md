@@ -21,6 +21,7 @@ npm i -D \
   @eslint/js \
   typescript-eslint \
   @smarttools/eslint-plugin-rxjs \
+  eslint-plugin-unicorn \
   @jkba/eslint-config-angular
 
 ```
