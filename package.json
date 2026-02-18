@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/jmeinlschmidt/eslint-config-angular#readme",
   "peerDependencies": {
-    "angular-eslint": "^19||^20",
+    "angular-eslint": "^19||^20||^21",
     "eslint": "^9",
     "@eslint/js": "^9",
     "eslint-config-prettier": ">=8",
