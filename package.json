@@ -49,6 +49,6 @@
     "typescript": ">=4",
     "typescript-eslint": "^8",
     "@smarttools/eslint-plugin-rxjs": "^1.0.0",
-    "eslint-plugin-unicorn": "^62.0.0"
+    "eslint-plugin-unicorn": ">=62.0.0"
   }
 }
