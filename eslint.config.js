@@ -89,6 +89,7 @@ const config = tseslint.config(
         { overrides: { constructors: 'no-public' } },
       ],
       '@typescript-eslint/prefer-optional-chain': 'error',
+      '@typescript-eslint/no-unnecessary-type-parameters': 'off', // Too noisy and faulty
 
       '@angular-eslint/no-input-rename': 'off', // I just simply disagree with this rule. Especially while using "transform" property.
       '@angular-eslint/prefer-on-push-component-change-detection': 'error',
@@ -169,8 +170,19 @@ const config = tseslint.config(
     },
     extends: [eslintPluginUnicorn.configs.recommended],
     rules: {
-      'unicorn/prevent-abbreviations': 'off', // I just simply disagree with this rule
-      'unicorn/no-array-reduce': 'off', // Author of banning reduce belongs to Functional Programming hell
+      'unicorn/prevent-abbreviations': 'off', // I disagree with this rule
+      'unicorn/no-empty-file': 'off', // Fails the lint
+      'unicorn/prefer-string-raw': 'off', // Fails the lint
+      'unicorn/no-null': 'off', // Too noisy
+      'unicorn/no-useless-undefined': 'off', // Tends to be faulty
+      'unicorn/no-array-sort': 'off', // Tends to be faulty
+      'unicorn/no-array-reverse': 'off', // Tends to be faulty
+      'unicorn/no-array-reduce': 'off', // I disagree with this rule
+      'unicorn/no-array-callback-reference': 'off', // I disagree with this rule
+      'unicorn/consistent-function-scoping': 'off', // I disagree with this rule
+      'unicorn/prefer-spread': 'off', // Tends to be faulty
+      'unicorn/prefer-math-min-max': 'off', // Tends to be faulty
+
     },
   },
 
