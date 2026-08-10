@@ -4,7 +4,7 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import angular from 'angular-eslint';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import * as importPlugin from 'eslint-plugin-import';
+import * as importPlugin from 'eslint-plugin-import-x';
 import rxjs from '@smarttools/eslint-plugin-rxjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
@@ -25,8 +25,8 @@ const config = tseslint.config(
     ],
     plugins: { rxjs },
     settings: {
-      // Reference https://www.npmjs.com/package/eslint-plugin-import
-      'import/resolver': {
+      // Reference https://www.npmjs.com/package/eslint-plugin-import-x
+      'import-x/resolver': {
         // You will also need to install and configure the TypeScript resolver
         // See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
         typescript: true,
@@ -47,7 +47,7 @@ const config = tseslint.config(
       'arrow-body-style': ['error', 'as-needed'],
 
       /**
-       * Declaration sort is handled by import/order rule.
+       * Declaration sort is handled by import-x/order rule.
        * This rule handles order within {}-brackets only.
        */
       'sort-imports': ['error', { ignoreDeclarationSort: true }],
@@ -98,7 +98,6 @@ const config = tseslint.config(
       '@angular-eslint/contextual-decorator': 'error',
       '@angular-eslint/component-max-inline-declarations': ['error', { template: 20 }],
       '@angular-eslint/no-attribute-decorator': 'error',
-      '@angular-eslint/no-conflicting-lifecycle': 'error',
       '@angular-eslint/no-empty-lifecycle-method': 'error',
       '@angular-eslint/no-forward-ref': 'warn', // For me, it is only a suggestion
       '@angular-eslint/no-input-prefix': 'error',
@@ -127,9 +126,9 @@ const config = tseslint.config(
         },
       ],
 
-      'import/no-absolute-path': 'error',
-      'import/newline-after-import': ['error', { count: 1 }],
-      'import/order': [
+      'import-x/no-absolute-path': 'error',
+      'import-x/newline-after-import': ['error', { count: 1 }],
+      'import-x/order': [
         'error',
         {
           groups: [['builtin', 'external'], 'internal', 'parent', 'sibling', 'index'],
@@ -140,9 +139,9 @@ const config = tseslint.config(
           },
         },
       ],
-      'import/no-useless-path-segments': ['error', { noUselessIndex: true }],
-      // 'import/no-deprecated': 'error', // Throws false-positive for RxJS,
-      'import/no-self-import': 'error',
+      'import-x/no-useless-path-segments': ['error', { noUselessIndex: true }],
+      // 'import-x/no-deprecated': 'error', // Throws false-positive for RxJS,
+      'import-x/no-self-import': 'error',
     },
   },
   {

@@ -1,6 +1,6 @@
 {
   "name": "@jkba/eslint-config-angular",
-  "version": "3.2.2",
+  "version": "3.3.0",
   "type": "module",
   "description": "Opinionated ESLint config for Angular projects",
   "main": "index.js",
@@ -38,12 +38,12 @@
   },
   "homepage": "https://github.com/jmeinlschmidt/eslint-config-angular#readme",
   "peerDependencies": {
-    "angular-eslint": "^19||^20||^21",
+    "angular-eslint": "^21||^22",
     "eslint": "^9||^10",
     "@eslint/js": "^9||^10",
     "eslint-config-prettier": ">=8",
     "eslint-import-resolver-typescript": ">=3.5.5",
-    "eslint-plugin-import": ">=2.27.0",
+    "eslint-plugin-import-x": ">=4.17.0",
     "eslint-plugin-prettier": ">=5",
     "prettier": ">=3",
     "typescript": ">=4",
