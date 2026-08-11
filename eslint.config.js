@@ -1,6 +1,7 @@
 // @ts-check
 
 import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 import angular from 'angular-eslint';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
@@ -9,7 +10,7 @@ import rxjs from '@smarttools/eslint-plugin-rxjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 
-const config = tseslint.config(
+const config = defineConfig(
   {
     files: ['**/*.ts'],
     processor: angular.processInlineTemplates,
@@ -23,7 +24,9 @@ const config = tseslint.config(
       importPlugin.flatConfigs?.recommended,
       importPlugin.flatConfigs?.typescript,
     ],
-    plugins: { rxjs },
+    // `@smarttools/eslint-plugin-rxjs` types don't satisfy ESLint's stricter `Plugin`
+    // type (readonly vs mutable `defaultOptions`); cast to keep `// @ts-check` happy.
+    plugins: { rxjs: /** @type {any} */ (rxjs) },
     settings: {
       // Reference https://www.npmjs.com/package/eslint-plugin-import-x
       'import-x/resolver': {
