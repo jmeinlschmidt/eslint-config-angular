@@ -106,6 +106,7 @@ const config = tseslint.config(
       '@angular-eslint/no-queries-metadata-property': 'error',
       '@angular-eslint/prefer-standalone': 'error',
       '@angular-eslint/prefer-signals': 'error',
+      '@angular-eslint/prefer-service-decorator': 'error',
       '@angular-eslint/relative-url-prefix': 'error',
       // '@angular-eslint/require-localize-metadata': 'error', // TODO: https://github.com/jmeinlschmidt/eslint-config-angular/issues/13
       '@angular-eslint/use-component-selector': 'error',
