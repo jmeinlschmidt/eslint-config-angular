@@ -173,7 +173,8 @@ const config = defineConfig(
     },
     extends: [eslintPluginUnicorn.configs.recommended],
     rules: {
-      'unicorn/prevent-abbreviations': 'off', // I disagree with this rule
+      'unicorn/name-replacements': 'off', // Renamed from `prevent-abbreviations` in unicorn v73; I disagree with this rule
+      'unicorn/consistent-class-member-order': 'off', // I disagree with this rule
       'unicorn/no-empty-file': 'off', // Fails the lint
       'unicorn/prefer-string-raw': 'off', // Fails the lint
       'unicorn/no-null': 'off', // Too noisy
