@@ -168,6 +168,12 @@ const config = defineConfig(
     },
   },
   {
+    // Unicorn is a JS/TS plugin — scope it to TypeScript files only.
+    // Without `files`, this block applies to every linted file (including
+    // `**/*.html`), so unicorn rules run against the Angular template AST.
+    // Rules matching `TemplateLiteral` (e.g. `no-incorrect-template-string-interpolation`)
+    // then crash on template-parser nodes that have no ESTree range.
+    files: ['**/*.ts'],
     languageOptions: {
       globals: globals.builtin,
     },
