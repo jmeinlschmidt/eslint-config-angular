@@ -192,6 +192,7 @@ const config = defineConfig(
       'unicorn/consistent-function-scoping': 'off', // I disagree with this rule
       'unicorn/prefer-spread': 'off', // Tends to be faulty
       'unicorn/prefer-math-min-max': 'off', // Tends to be faulty
+      'unicorn/no-non-function-verb-prefix': 'off', // Too noisy; flags idiomatic non-function fields (e.g. Angular `destroyRef`, descriptive label constants)
 
     },
   },
